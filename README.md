@@ -28,7 +28,7 @@ Once copied the console output should show the following output
 curl http://localhost:8080/api/query
 ```
 
-### Querying the data
+### Running the H2 SQL shell
 
 Load the following in a browser
 ```text
