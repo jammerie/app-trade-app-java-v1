@@ -1,0 +1,12 @@
+---
+entityList:
+- recordName: "Record"
+  fieldMapping:
+    - fieldName: "BuyerParty"
+      xpath: "//buyerPartyReference/@href"
+    - fieldName: "SellerParty"
+      xpath: "//sellerPartyReference/@href"
+    - fieldName: "Amount"
+      xpath: "//paymentAmount/amount/text()"
+    - fieldName: "Currency"
+      xpath: "//paymentAmount/currency/text()"
