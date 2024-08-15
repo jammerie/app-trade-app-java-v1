@@ -2,6 +2,10 @@
 
 ## Running the Application
 ### Launching
+Prerequisite:
+- JDK 17
+- Unix/Linux Shell (though possible to work with windows, these steps was tested with MaxOSS)
+
 To start the application run the following
 ```shell
 ./gradlew bootRun
@@ -9,8 +13,11 @@ To start the application run the following
 
 ### Loading data
 ```shell
-rm event-sample/* event/incoming
+cp event-sample/* event/incoming
 ```
+
+Once copied the console output should show the following output
+
 
 ### Querying the data
 ```shell

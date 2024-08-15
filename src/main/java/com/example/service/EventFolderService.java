@@ -112,15 +112,16 @@ public class EventFolderService {
                 // add the time to the targetPath to avoid file name collision
                 Path targetPath = Paths.get(directoryPathCompleted + "/" + fileName.getFileName() + "." + System.currentTimeMillis());
                 Files.move(srcPath, targetPath, StandardCopyOption.REPLACE_EXISTING);
+                logger.info("Complete processing of {}", fileName);
             } catch (Exception e) {
-                logger.error("there was an error", e);
+                logger.error("there was an error processing file " + fileName, e);
 
                 // add the time to the targetPath to avoid file name collision
                 Path targetPath = Paths.get(directoryPathError + "/" + fileName.getFileName() + "." + System.currentTimeMillis());
                 try {
                     Files.move(srcPath, targetPath, StandardCopyOption.REPLACE_EXISTING);
                 } catch (IOException ex) {
-                    logger.error("not able to move to error folder", e);
+                    logger.error("not able to move to error folder " + fileName, e);
                 }
             }
         }
