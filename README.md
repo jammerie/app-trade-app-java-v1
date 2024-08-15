@@ -18,6 +18,10 @@ cp event-sample/* event/incoming
 
 Once copied the console output should show the following output
 
+```text
+2024-08-15T15:44:59.022+10:00  INFO 70769 --- [trade] [       Thread-1] com.example.service.EventFolderService   : Complete processing of event0.xml
+```
+
 
 ### Querying the data
 ```shell
